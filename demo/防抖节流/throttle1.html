@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>节流限制</title>
+  <style>
+    .div1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      padding: 400px 220px;
+      box-sizing: border-box;
+      height: 900px;
+      width: 1000px;
+      text-align: center;
+      font: bold 30px arial;
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1"></div>
+
+  <script type="text/javascript">
+    /**
+    * @description: 节流实现（1）—— 利用定时器
+    * @param null
+    * @return: null
+    */
+    (function () {
+      var div1 = document.getElementsByClassName('div1')[0]
+      var count = 0
+      var tId = null;
+      function mouseEvent() {
+        if (!tId) {
+          div1.innerHTML = count++;
+          tId = 1;
+          setTimeout(function () {
+            tId = 0
+          }, 800)//节流，设置每次操作间隔为800ms；在每次执行过后，都需要等待800ms才能进行下一次执行（换句话说，也就是没800ms内最多只能有一个执行），但其实这样子实现跟防抖比起来也不过是防抖只要有动作触发就会一直更新并重新计算时间间隔，而这里不会，上一次执行完该等多久就等多久，这中间的操作不会影响等待时间。
+        }
+      }
+
+      div1.addEventListener('mousemove', mouseEvent)
+      div1.onmouseleave = function () { div1.innerHTML = (count = 0) }
+    }())
+
+    /**
+     * @description: 同样利用定时器，也可以这么写
+     * @param {type}
+     * @return:
+     */
+    /*
+   (function () {
+     var div1 = document.getElementsByClassName('div1')[0]
+     var count = 0
+     var tId = null;
+     function mouseEvent() {
+       if (tId) return;
+       else {
+         tId = setTimeout(function () {
+           div1.innerHTML = count++;
+           clearTimeout(tId);
+           tId = 0
+         }, 800)
+         //与上相似，只是上面是先执行第一次再等待，而这里是先等待后执行罢了
+       }
+     }
+
+     div1.addEventListener('mousemove', mouseEvent)
+     div1.onmouseleave = function () { div1.innerHTML = (count = 0) }
+   }())
+   */
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>节流限制</title>
+  <style>
+    .div1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      padding: 400px 220px;
+      box-sizing: border-box;
+      height: 900px;
+      width: 1000px;
+      text-align: center;
+      font: bold 30px arial;
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1"></div>
+
+  <script type="text/javascript">
+    /**
+    * @description: 节流实现（2）—— 利用时间戳
+    * @param null 
+    * @return: null
+    */
+    (function (delay) {
+      var div1 = document.getElementsByClassName('div1')[0]
+      var count = 0
+      var now = 0
+      var last = 0
+      function mouseEvent() {
+        now = Date.now();
+        if (now > last + delay) {
+          div1.innerHTML = count++;
+          last = now
+        }
+      }
+      div1.addEventListener('mousemove', mouseEvent)
+      div1.onmouseleave = function () { div1.innerHTML = (count = 0) }
+    }(800))
+  </script>
+
+</body>
+
+</html>

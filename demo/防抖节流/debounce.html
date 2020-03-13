@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>防抖限制</title>
+  <style>
+    .div1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0 auto;
+      padding: 400px 220px;
+      box-sizing: border-box;
+      height: 900px;
+      width: 1000px;
+      text-align: center;
+      font: bold 30px arial;
+      color: white;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="div1"></div>
+
+  <script type="text/javascript">
+    /**
+       * @description: 防抖实现
+       * @param null
+       * @return: null
+       */
+    (function () {
+      var div1 = document.getElementsByClassName('div1')[0]
+      var count = 0
+      var tId = null;
+      function mouseEvent() {
+        clearTimeout(tId)
+        tId = setTimeout(function () {
+          div1.innerHTML = count++;
+        }, 100)//防抖，设置每次操作间隔为100ms；而只要有操作在间隔内触发，就会重新计算这100ms；于是也有了视觉效果为：每次都得等鼠标停止移动100ms下来后才会再次触发count++
+      }
+      div1.addEventListener('mousemove', mouseEvent)
+      div1.onmouseleave = function () { div1.innerHTML = (count = 0) }
+    }())
+
+  </script>
+
+</body>
+
+</html>
