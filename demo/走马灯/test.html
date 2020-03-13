@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Document</title>   
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<script src="./vue.min.js.js"></script>
+</head>
+
+<body>
+<!-- 定义一个vue的管理区块，（MVVM中的View） -->
+<div id="app">
+    <button @click="toggle">显示/隐藏</button><br>
+    <transition 
+    enter-active-class="animated fadeInRight"
+    leave-active-class="animated fadeOutRight"
+    >
+    <!-- 坑：span行内元素（行内元素没有宽） 
+         应该改为块级元素
+    -->
+          <!-- <span class="show" v-show="isshow">it创业</span> -->
+          <div style="width:200px" class="show" v-show="isshow">it创业</div> 
+    </transition>
+</div>
+</body>
+
+<script>
+
+    // 实例化vue对象（MVVM中的View Model）
+    new Vue({
+        // vm控制的区块为id为app的div，此div中的所有vue指令均可以被vm解析
+        el:'#app',
+        data:{
+        // 数据 （MVVM中的Model）   
+            isshow:false
+        },
+        methods:{
+            toggle:function() {
+                this.isshow = !this.isshow;
+            }
+        }
+    })
+</script>
+</html>

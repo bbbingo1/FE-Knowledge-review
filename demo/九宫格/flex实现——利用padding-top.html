@@ -1,0 +1,51 @@
+<!--
+ * @Description: 关键点：利用了padding-top和flex-wrap:wrap，当设置background-color时，是包括盒子模型中的content和padding的，
+                但是为什么不设置height呢？因为父元素没有高度，所以定义height:30%是没有用的，且若想每个block都为正方形，最好的方
+                式就是设置padding-top/padding-bottom：a%，因为此时的百分比是父元素宽度的百分比，而width也为父元素宽度的百分比，
+                所以block可以成为正方形。
+ * @Author: bingo
+ * @Date: 2019-06-03 14:11:22
+ * @LastEditTime: 2019-06-03 14:17:52
+ * @LastEditors: Please set LastEditors
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flex布局实现九宫格</title>
+</head>
+<style>
+  .block {
+    padding-top: 30%;
+    margin-top: 3%;
+    border-radius: 10%;
+    background-color: orange;
+    width: 30%;
+  }
+
+  .container-flex2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 500px;
+  }
+</style>
+
+<body>
+  <div class="container-flex2">
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+    <div class="block"></div>
+  </div>
+</body>
+
+</html>

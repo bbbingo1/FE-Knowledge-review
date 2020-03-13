@@ -1,0 +1,48 @@
+<!DOCTYPE >
+<meta charset="utf-8">
+<html>
+<head>
+<title>文档流html</title>
+</head>
+<body>
+	<h3>实例一</h3>
+	<div style="background: red; width: 100px; height: 100px;">不浮动，正常文档流之内</div>
+	<div style="background: blue; width: 100px; height: 100px; float: left;">向左浮动</div>
+	<div style="background: yellow; width: 200px; height: 200px;">部分浮动，文本不重叠</div>
+
+	<br><br>
+	<h3>实例二</h3>
+	<div style="background: red; width: 200px;" >
+		<div style="background: blue; width: 100px; height: 100px; float: left;">我向左浮动</div>
+		<div style="clear: both;"></div>
+	</div>
+
+	<br><br>
+	<h3>实例三</h3>
+	<div style="background: red; width: 200px; height: 200px; position: relative;">
+	我是父元素，我设置了相对定位
+	<div style="background: yellow; width: 100px; height: 100px; position: absolute; top: 100px; left: 100px;">以父元素为参照点绝对定位</div>
+	</div>
+
+	<br><br>
+	<h3>实例四</h3>
+	<div style="background: red; width: 200px; height: 200px; position: relative;">
+	<div style="background: blue; width: 100px; height: 100px;">我什么都没有，占个位置</div>
+	<div style="background: yellow; width: 100px; height: 100px; position: absolute;top: 100px; left: 100px;">以原本位置为参照点绝对定位</div>
+	<div style="background: pink; width: 100px; height: 100px;">因为黄色框框脱离文档流，这里没有元素所以我可以占</div>
+	</div>
+
+	<br><br>
+	<h3>实例五</h3>
+	<div style="background: red; width: 100px; height: 100px; position: relative; top: 100px; left: 100px;">
+		相对定位
+	</div>
+	<div style="background: yellow; width: 300px; height: 100px;">上面那块白色<br>区域是红框框<br>占据的地方</div>
+</body>
+</html>
+
+
+
+
+
+

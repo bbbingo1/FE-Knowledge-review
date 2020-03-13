@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>懒加载示例</title>
+</head>
+<style>
+    .image-item {
+        height: 400px;
+        width: 500px;
+        display: inline-block;
+        /* transition-duration: 1s; */
+        cursor: pointer;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -webkit-animation-name: scroll;
+        animation-name: scroll;
+    }
+
+    @-webkit-keyframes scroll {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scroll {
+        0% {
+            opacity: 0;
+            -webkit-transform: translateY(20px);
+            -ms-transform: translateY(20px);
+            transform: translateY(20px);
+        }
+
+        100% {
+            opacity: 1;
+            -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+            transform: translateY(0);
+        }
+    }
+</style>
+
+<body>
+    <div>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image1.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image2.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image3.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image4.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image5.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image6.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image7.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image8.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image9.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image10.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image1.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image2.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image3.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image4.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image5.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image6.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image7.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image8.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image9.jpg'>
+        <img src="" lazyload="true" class="image-item" data-src='./image/image10.jpg'>
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

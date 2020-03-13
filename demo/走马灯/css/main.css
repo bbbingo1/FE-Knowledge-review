@@ -1,0 +1,86 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #000;
+}
+
+#b_wrap, .b_wrap_item, .b_outer_item {
+    width: 100%;
+    height: 100%;
+}
+
+.b_outer_item {
+    position: absolute;
+    /* 这个absolute很关键！ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b_inner_item {
+    width: 18rem;
+    height: 24rem;
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover!important;
+    animation: scale 1s;
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1, 1);
+    }
+    0% {
+        transform: scale(0, 0);
+    }
+}
+
+.b_item {
+    font-size: 2.4rem;
+    font-weight: 1000;
+    color: rgba(255, 255, 255, 0.877);
+    mix-blend-mode: difference;
+    filter: invert(20%);
+    /* animation-delay: 1s; */
+    animation: slide 1.8s;
+}
+
+@keyframes slide {
+    100% {
+        transform: translateX(0);
+    }
+    95% {
+        transform: translateX(-5%);
+    }
+    80% {
+        transform: translateX(10%);
+    }
+    70% {
+        transform: translateX(-20%);
+    }
+    10% {
+        transform: translateX(100%);
+    }    0% {
+        transform: translateX(100%);
+    }
+}
+
+/* .image-enter-active {
+    transform: translateX(0);
+    transition: all 0.5s ease;
+}
+
+.image-leave-active {
+    transform: translateX(-100%);
+    transition: all 0.5s ease;
+} */
+
+.c1, .c2 {
+    animation-duration: 1000ms !important;
+}

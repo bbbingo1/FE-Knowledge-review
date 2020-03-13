@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <title>走马灯</title>
+</head>
+
+<body>
+    <div id="b_wrap" v-on:touchstart="stop()" v-on:touchend="move()">
+        <transition-group tag="div" enter-active-class="c1 slideInRight" leave-active-class="c2 zoomOutLeft"
+            class="b_wrap_item">
+            <div class="b_outer_item" :style='{background:arr[index]}' v-show='index == showIndex' :key="item+index"
+                v-for="(item,index) in names">
+                <div class="b_inner_item" :style='{background:"url(./pics/pic" + (index + 1) + ".jpg)"}'>
+                    <div class="b_item">{{item}}</div>
+                </div>
+            </div>
+        </transition-group>
+    </div>
+
+    <script src="./vue.min.js.js"></script>
+    <script src="./index.js"></script>
+
+</body>
+
+</html>
