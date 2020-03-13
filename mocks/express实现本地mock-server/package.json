@@ -1,0 +1,28 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "express实现本地接口测试",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "mock": "node mock/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bbbingo1/mock-server.git"
+  },
+  "author": "Bingo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bbbingo1/mock-server/issues"
+  },
+  "homepage": "https://github.com/bbbingo1/mock-server#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "underscore": "^1.9.1"
+  }
+}

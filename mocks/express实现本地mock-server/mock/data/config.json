@@ -1,0 +1,1274 @@
+{
+  "professionalView": {
+    "result": "success",
+    "message": {
+      "powerGrid": [
+        {
+          "district": null,
+          "rate": null,
+          "unit": "海珠区",
+          "result": 0.67,
+          "plan": 3.0,
+          "actual": 2.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "南沙区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "全局",
+          "result": 0.27,
+          "plan": 15.0,
+          "actual": 4.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "番禺区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "黄埔区",
+          "result": 0.5,
+          "plan": 2.0,
+          "actual": 1.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "天河区",
+          "result": 0.0,
+          "plan": 1.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "增城区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "从化区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "荔湾区",
+          "result": 0.0,
+          "plan": 1.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "越秀区",
+          "result": 0.0,
+          "plan": 1.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "白云区",
+          "result": 0.14,
+          "plan": 7.0,
+          "actual": 1.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "花都区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        }
+      ],
+      "homeTable": [
+        {
+          "district": null,
+          "rate": null,
+          "unit": "海珠区",
+          "result": 0.15,
+          "plan": 67.0,
+          "actual": 10.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "南沙区",
+          "result": 0.13,
+          "plan": 53.0,
+          "actual": 7.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "全局",
+          "result": 0.24,
+          "plan": 973.0,
+          "actual": 229.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "番禺区",
+          "result": 0.34,
+          "plan": 117.0,
+          "actual": 40.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "黄埔区",
+          "result": 0.49,
+          "plan": 53.0,
+          "actual": 26.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "天河区",
+          "result": 0.16,
+          "plan": 188.0,
+          "actual": 30.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "增城区",
+          "result": 0.34,
+          "plan": 38.0,
+          "actual": 13.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "从化区",
+          "result": 0.07,
+          "plan": 54.0,
+          "actual": 4.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "荔湾区",
+          "result": 0.22,
+          "plan": 91.0,
+          "actual": 20.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "越秀区",
+          "result": 0.26,
+          "plan": 87.0,
+          "actual": 23.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "白云区",
+          "result": 0.25,
+          "plan": 191.0,
+          "actual": 48.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "花都区",
+          "result": 0.24,
+          "plan": 34.0,
+          "actual": 8.0
+        }
+      ],
+      "pile": [],
+      "summer": [
+        {
+          "district": null,
+          "rate": null,
+          "unit": "海珠区",
+          "result": 0.06,
+          "plan": 48.0,
+          "actual": 3.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "南沙区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "全局",
+          "result": 0.08,
+          "plan": 225.0,
+          "actual": 18.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "番禺区",
+          "result": 0.75,
+          "plan": 4.0,
+          "actual": 3.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "黄埔区",
+          "result": 0.0,
+          "plan": 1.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "天河区",
+          "result": 0.0,
+          "plan": 75.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "增城区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "从化区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "荔湾区",
+          "result": 0.07,
+          "plan": 28.0,
+          "actual": 2.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "越秀区",
+          "result": 0.11,
+          "plan": 47.0,
+          "actual": 5.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "白云区",
+          "result": 0.23,
+          "plan": 22.0,
+          "actual": 5.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "花都区",
+          "result": 1.0,
+          "plan": 0.0,
+          "actual": 0.0
+        }
+      ],
+      "room": [
+        {
+          "district": null,
+          "rate": null,
+          "unit": "海珠区",
+          "result": 0.73,
+          "plan": 147.0,
+          "actual": 108.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "南沙区",
+          "result": 0.54,
+          "plan": 271.0,
+          "actual": 146.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "全局",
+          "result": 0.48,
+          "plan": 3838.0,
+          "actual": 1846.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "番禺区",
+          "result": 0.48,
+          "plan": 643.0,
+          "actual": 311.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "黄埔区",
+          "result": 0.67,
+          "plan": 181.0,
+          "actual": 121.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "天河区",
+          "result": 0.4,
+          "plan": 659.0,
+          "actual": 264.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "增城区",
+          "result": 0.57,
+          "plan": 274.0,
+          "actual": 157.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "从化区",
+          "result": 0.46,
+          "plan": 268.0,
+          "actual": 122.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "荔湾区",
+          "result": 0.47,
+          "plan": 143.0,
+          "actual": 67.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "越秀区",
+          "result": 0.31,
+          "plan": 175.0,
+          "actual": 55.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "白云区",
+          "result": 0.43,
+          "plan": 834.0,
+          "actual": 356.0
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "花都区",
+          "result": 0.57,
+          "plan": 243.0,
+          "actual": 139.0
+        }
+      ],
+      "expansion": [
+        {
+          "district": null,
+          "rate": null,
+          "unit": "海珠区",
+          "result": 37.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "南沙区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "全局",
+          "result": 34.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "番禺区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "黄埔区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "天河区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "增城区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "从化区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "荔湾区",
+          "result": 30.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "越秀区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "白云区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        },
+        {
+          "district": null,
+          "rate": null,
+          "unit": "花都区",
+          "result": 0.0,
+          "plan": null,
+          "actual": null
+        }
+      ],
+      "relation": {
+        "powerGrid": null,
+        "homeTable": "1",
+        "pile": null,
+        "summer": "2",
+        "room": "4",
+        "expansion": "业扩配套项目平均建设周期"
+      }
+    }
+  },
+  "rightFourRate": {
+    "result": "success",
+    "message": [
+      {
+        "name": "4",
+        "rate2": 0.0
+      },
+      {
+        "name": "5",
+        "rate2": 0.34
+      },
+      {
+        "name": "6",
+        "rate2": 1.0
+      },
+      {
+        "name": "7",
+        "rate2": 1.0
+      },
+      {
+        "name": "8",
+        "rate2": 0.57
+      },
+      {
+        "name": "9",
+        "rate2": 0.0
+      }
+    ]
+  },
+  "getConstructionStrengthForecast": {
+    "result": "success",
+    "message": [
+      {
+        "id": 325,
+        "unit": "全局",
+        "month": "一月",
+        "predictPersonNum": 31560.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 326,
+        "unit": "全局",
+        "month": "二月",
+        "predictPersonNum": 31560.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 327,
+        "unit": "全局",
+        "month": "三月",
+        "predictPersonNum": 31560.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 328,
+        "unit": "全局",
+        "month": "四月",
+        "predictPersonNum": 60280.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 329,
+        "unit": "全局",
+        "month": "五月",
+        "predictPersonNum": 60280.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 330,
+        "unit": "全局",
+        "month": "六月",
+        "predictPersonNum": 60280.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 331,
+        "unit": "全局",
+        "month": "七月",
+        "predictPersonNum": 45563.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 332,
+        "unit": "全局",
+        "month": "八月",
+        "predictPersonNum": 35380.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 333,
+        "unit": "全局",
+        "month": "九月",
+        "predictPersonNum": 30120.0,
+        "actualPersonNum": 2395.0
+      },
+      {
+        "id": 334,
+        "unit": "全局",
+        "month": "十月",
+        "predictPersonNum": 20985.0,
+        "actualPersonNum": null
+      },
+      {
+        "id": 335,
+        "unit": "全局",
+        "month": "十一月",
+        "predictPersonNum": 12986.0,
+        "actualPersonNum": null
+      },
+      {
+        "id": 336,
+        "unit": "全局",
+        "month": "十二月",
+        "predictPersonNum": 12986.0,
+        "actualPersonNum": null
+      }
+    ]
+  },
+  "getMonthConstructionStrengthForecast": {
+    "result": "success",
+    "message": {
+      "actual": {
+        "2019-01-19": 91.0,
+        "2019-01-18": 153.0,
+        "2019-01-17": 198.0,
+        "2019-01-16": 260.0,
+        "2019-01-15": 397.0,
+        "2019-01-14": 444.0,
+        "2019-01-13": 451.0,
+        "2019-01-12": 476.0,
+        "2019-01-11": 549.0,
+        "2019-01-10": 604.0,
+        "2019-01-31": 0.0,
+        "2019-01-30": 0.0,
+        "2019-01-09": 679.0,
+        "2019-01-08": 726.0,
+        "2019-01-07": 776.0,
+        "2019-01-29": 0.0,
+        "2019-01-06": 776.0,
+        "2019-01-28": 0.0,
+        "2019-01-05": 776.0,
+        "2019-01-27": 0.0,
+        "2019-01-04": 853.0,
+        "2019-01-26": 0.0,
+        "2019-01-03": 948.0,
+        "2019-01-25": 3.0,
+        "2019-01-02": 1023.0,
+        "2019-01-24": 13.0,
+        "2019-01-01": 1023.0,
+        "2019-01-23": 22.0,
+        "2019-01-22": 69.0,
+        "2019-01-21": 91.0,
+        "2019-01-20": 91.0
+      },
+      "plan": {
+        "2019-01-19": 66.0,
+        "2019-01-18": 66.0,
+        "2019-01-17": 66.0,
+        "2019-01-16": 66.0,
+        "2019-01-15": 66.0,
+        "2019-01-14": 66.0,
+        "2019-01-13": 66.0,
+        "2019-01-12": 66.0,
+        "2019-01-11": 66.0,
+        "2019-01-10": 66.0,
+        "2019-01-31": 66.0,
+        "2019-01-30": 66.0,
+        "2019-01-09": 66.0,
+        "2019-01-08": 66.0,
+        "2019-01-07": 66.0,
+        "2019-01-29": 66.0,
+        "2019-01-06": 66.0,
+        "2019-01-28": 66.0,
+        "2019-01-05": 66.0,
+        "2019-01-27": 66.0,
+        "2019-01-04": 66.0,
+        "2019-01-26": 66.0,
+        "2019-01-03": 66.0,
+        "2019-01-25": 66.0,
+        "2019-01-02": 66.0,
+        "2019-01-24": 66.0,
+        "2019-01-01": 66.0,
+        "2019-01-23": 66.0,
+        "2019-01-22": 66.0,
+        "2019-01-21": 66.0,
+        "2019-01-20": 66.0
+      }
+    }
+  },
+  "threeRateGraph": {
+    "result": "success",
+    "message": {
+      "dayCommissioning": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        },
+        {
+          "node": 9,
+          "growth": 0.0
+        },
+        {
+          "node": 10,
+          "growth": 0.0
+        },
+        {
+          "node": 11,
+          "growth": 0.0
+        },
+        {
+          "node": 12,
+          "growth": 0.0
+        },
+        {
+          "node": 13,
+          "growth": 0.0
+        },
+        {
+          "node": 14,
+          "growth": 0.0
+        },
+        {
+          "node": 15,
+          "growth": 0.0
+        },
+        {
+          "node": 16,
+          "growth": 0.0
+        },
+        {
+          "node": 17,
+          "growth": 0.0
+        },
+        {
+          "node": 18,
+          "growth": 0.0
+        },
+        {
+          "node": 19,
+          "growth": 0.0
+        },
+        {
+          "node": 20,
+          "growth": 0.0
+        },
+        {
+          "node": 21,
+          "growth": 0.0
+        },
+        {
+          "node": 22,
+          "growth": 0.0
+        },
+        {
+          "node": 23,
+          "growth": 0.0
+        },
+        {
+          "node": 24,
+          "growth": 0.0
+        }
+      ],
+      "weekConstructionStrength": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        }
+      ],
+      "weekInvestment": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        }
+      ],
+      "monthInvestment": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        },
+        {
+          "node": 9,
+          "growth": 0.0
+        }
+      ],
+      "monthCommissioning": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        },
+        {
+          "node": 9,
+          "growth": 0.0
+        }
+      ],
+      "monthConstructionStrength": [
+        {
+          "node": 1,
+          "growth": 1253.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        }
+      ],
+      "weekCommissioning": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        }
+      ],
+      "dayInvestment": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        },
+        {
+          "node": 9,
+          "growth": 0.0
+        },
+        {
+          "node": 10,
+          "growth": 0.0
+        },
+        {
+          "node": 11,
+          "growth": 0.0
+        },
+        {
+          "node": 12,
+          "growth": 0.0
+        },
+        {
+          "node": 13,
+          "growth": 0.0
+        },
+        {
+          "node": 14,
+          "growth": 0.0
+        },
+        {
+          "node": 15,
+          "growth": 0.0
+        },
+        {
+          "node": 16,
+          "growth": 0.0
+        },
+        {
+          "node": 17,
+          "growth": 0.0
+        },
+        {
+          "node": 18,
+          "growth": 0.0
+        },
+        {
+          "node": 19,
+          "growth": 0.0
+        },
+        {
+          "node": 20,
+          "growth": 0.0
+        },
+        {
+          "node": 21,
+          "growth": 0.0
+        },
+        {
+          "node": 22,
+          "growth": 0.0
+        },
+        {
+          "node": 23,
+          "growth": 0.0
+        },
+        {
+          "node": 24,
+          "growth": 0.0
+        }
+      ],
+      "dayConstructionStrength": [
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        },
+        {
+          "node": 9,
+          "growth": 0.0
+        },
+        {
+          "node": 10,
+          "growth": 0.0
+        },
+        {
+          "node": 11,
+          "growth": 0.0
+        },
+        {
+          "node": 12,
+          "growth": 0.0
+        },
+        {
+          "node": 13,
+          "growth": 0.0
+        },
+        {
+          "node": 14,
+          "growth": 0.0
+        },
+        {
+          "node": 15,
+          "growth": 0.0
+        },
+        {
+          "node": 16,
+          "growth": 0.0
+        },
+        {
+          "node": 17,
+          "growth": 0.0
+        },
+        {
+          "node": 18,
+          "growth": 0.0
+        },
+        {
+          "node": 19,
+          "growth": 0.0
+        },
+        {
+          "node": 20,
+          "growth": 0.0
+        },
+        {
+          "node": 21,
+          "growth": 0.0
+        },
+        {
+          "node": 22,
+          "growth": 0.0
+        },
+        {
+          "node": 23,
+          "growth": 0.0
+        },
+        {
+          "node": 24,
+          "growth": 0.0
+        },
+        {
+          "node": 25,
+          "growth": 0.0
+        },
+        {
+          "node": 26,
+          "growth": 0.0
+        },
+        {
+          "node": 27,
+          "growth": 0.0
+        },
+        {
+          "node": 28,
+          "growth": 0.0
+        },
+        {
+          "node": 29,
+          "growth": 0.0
+        },
+        {
+          "node": 30,
+          "growth": 0.0
+        },
+        {
+          "node": 1,
+          "growth": 0.0
+        },
+        {
+          "node": 2,
+          "growth": 0.0
+        },
+        {
+          "node": 3,
+          "growth": 0.0
+        },
+        {
+          "node": 4,
+          "growth": 0.0
+        },
+        {
+          "node": 5,
+          "growth": 0.0
+        },
+        {
+          "node": 6,
+          "growth": 0.0
+        },
+        {
+          "node": 7,
+          "growth": 0.0
+        },
+        {
+          "node": 8,
+          "growth": 0.0
+        },
+        {
+          "node": 9,
+          "growth": 0.0
+        },
+        {
+          "node": 10,
+          "growth": 0.0
+        },
+        {
+          "node": 11,
+          "growth": 0.0
+        },
+        {
+          "node": 12,
+          "growth": 0.0
+        },
+        {
+          "node": 13,
+          "growth": 0.0
+        },
+        {
+          "node": 14,
+          "growth": 0.0
+        },
+        {
+          "node": 15,
+          "growth": 0.0
+        },
+        {
+          "node": 16,
+          "growth": 0.0
+        },
+        {
+          "node": 17,
+          "growth": 0.0
+        },
+        {
+          "node": 18,
+          "growth": 0.0
+        },
+        {
+          "node": 19,
+          "growth": 0.0
+        },
+        {
+          "node": 20,
+          "growth": 0.0
+        },
+        {
+          "node": 21,
+          "growth": 0.0
+        },
+        {
+          "node": 22,
+          "growth": 0.0
+        },
+        {
+          "node": 23,
+          "growth": 0.0
+        }
+      ]
+    }
+  }
+}
