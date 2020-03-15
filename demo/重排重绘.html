@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM访问与重绘重排</title>
+</head>
+
+<body>
+    <div id="container1"></div>
+    <div id="container2"></div>
+    <div id="container3"></div>
+    <script>
+        var times = 15000;
+        // code1 每次都访问并修改DOM+重排+重绘
+        console.time(1);
+        for(var i = 0; i < times; i++) {
+          document.getElementById('container1').innerHTML += 'a';
+        }
+        console.timeEnd(1);
+
+        // code2 多次访问 DOM，一次修改DOM+重排+重绘
+        console.time(2);
+        var str = '';
+        for(var i = 0; i < times; i++) {
+          var tmp = document.getElementById('container2').innerHTML;
+          str += 'a';
+        }
+        document.getElementById('container2').innerHTML = str;
+        console.timeEnd(2);
+
+        // code3 一次访问并修改DOM+重排+重绘
+        console.time(3);
+        var _str = '';
+        for(var i = 0; i < times; i++) {
+          _str += 'a';
+        }
+        document.getElementById('container3').innerHTML = _str;
+        console.timeEnd(3);
+    </script>
+</body>
+</html>
+
+<!-- 
+ 1: 1211.830810546875ms   ——多次访问+多次重排重绘
+ 2: 7.52587890625ms       ——多次访问+一次重排重绘
+ 3: 1.0380859375ms        ——一次访问+一次重排重绘
+ -->
