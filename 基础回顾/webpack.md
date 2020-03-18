@@ -4,6 +4,10 @@
 
 webpack是一个模块打包工具，可以**递归**的打包项目中的所有模块，最终生成一个打包文件，他和其他工具最大的不同在于他可以支持代码分割，模块化和全局分析。
 
+### webpack-dev-server和http服务器如nginx有什么区别
+
+webpack-dev-server使用内存来存储webpack开发环境下的打包文件，并且可以使用模块热更新，开发时比传统的http服务更简单高效。
+
 ### 什么是loader，什么是plugins
 
 loader：可以将某一类型的文件进行转换，并且引入到打包出的文件。
@@ -20,11 +24,80 @@ plugins（插件）：可以打包优化，资源管理，注入环境变量。
 #### 有哪些常见的Plugin？
 
 - define-plugin：定义环境变量
-- html-webpack-plugin：简化html文件创建
+
+- html-webpack-plugin：依据一个简单的index.html模版，生成一个自动引用你打包后的js文件的新index.html 
+
 - uglifyjs-webpack-plugin：通过`UglifyES`压缩`ES6`代码
+
+- HotModuleReplacementPlugin 
+
+  模块热替换，代码更改浏览器自动刷新。但是要注意，永远不要再生产环境使用HotModuleReplacementPlugin。
+
+  HMR的核心点有两个：
+
+  > 1. 如何在服务端文件变化之后通知客户端？使用socket
+  > 2. 如何判断文件是否发生变化？客户端和服务端都保存chunk，比较是否发生变化
+
 - webpack-parallel-uglify-plugin: 多核压缩,提高压缩速度
+
 - webpack-bundle-analyzer: 可视化webpack输出文件的体积
+
 - mini-css-extract-plugin: CSS提取到单独的文件中,支持按需加载
+
+#### 手写loader
+
+```js
+// test: 匹配所处理文件的扩展名的正则表达式（必须）
+// loader: loader的名称（必须）（需要使用npm安装）
+// include/exclude: 手动添加处理的文件，屏蔽不需要处理的文件（可选）
+// query: 为loaders提供额外的设置选项
+// eg: 
+var baseConfig = {
+  // ...
+  module: {
+    rules: [
+      {
+        test: /*匹配文件后缀名的正则*/,
+        use: [
+          loader: /*loader名字*/,
+          query: /*额外配置*/
+        ]
+  		}
+ 		]
+	}
+}
+
+// ex:
+var baseConfig = {
+  entry: {
+    main: './src/index.js'
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve('./build')
+  },
+  devServer: {
+    contentBase: './src',
+    historyApiFallBack: true,
+    inline: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.less$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: 'css-loader'},
+          {loader: 'less-loader'}
+        ],
+        exclude: /node_modules/
+      }
+    ]
+  }
+}
+```
+
+
 
 ### 什么是module，什么是Chunk，什么是bundle
 
@@ -99,5 +172,23 @@ exports.htmlPlugin = function () {
   })
   return arr
 }
+```
+
+### 什么是模块热更新
+
+代码修改后不用刷新浏览器就可以更新，是高级的自动刷新浏览器。
+
+```js
+// webpack.config.js
+devServer:{
+  // inline: true // 实时刷新；这里使用HotModuleReplacementPlugin(),不用还不成熟的inline
+  // hot: true, // 热更新 // 同HotModuleReplacementPlugin()；
+},
+plugins: [
+  new webpack.HotModuleReplacementPlugin(),
+	// 显示被替换模块的名称
+  new webpack.NamedModulesPlugin(), // HMR shows correct file names
+]
+
 ```
 
