@@ -126,7 +126,7 @@ bundle：打包出来的文件
 
 输出的js中：vendor则是通过提取公共模块插件来提取的代码块（webpack本身带的模块化代码部分），而manifest则是在vendor的基础上，再抽取出要经常变动的部分，比如关于异步加载js模块部分的内容。
 
-### webpack配置多页面（修改入口和输出）
+### webpack配置多页面（修改入口和输出）（🔥）
 
 ```js
 //多入口配置
@@ -192,3 +192,171 @@ plugins: [
 
 ```
 
+## webpack优化（🔥）
+
+### 缩小文件的搜索范围
+
+1. resolve告诉webpack去哪里搜索文件
+
+   1. 设置`resolve.modules:[path.resolve(__dirname, 'node_modules')]`避免层层查找。
+
+      `resolve.modules`告诉webpack去哪些目录下寻找第三方模块，默认值为`['node_modules']`，会依次查找./node_modules、../node_modules、../../node_modules。
+
+   2. 对庞大的第三方模块设置`resolve.alias`, 使webpack直接使用库的min文件，避免库内解析
+
+      如对于react：
+
+      ```js
+      resolve.alias:{
+      	'react':patch.resolve(__dirname, './node_modules/react/dist/react.min.js')
+      }
+      ```
+
+      这样会影响Tree-Shaking，适合对整体性比较强的库使用，如果是像lodash这类工具类的比较分散的库，比较适合Tree-Shaking，避免使用这种方式。
+
+   3. 合理配置`resolve.extensions`，减少文件查找
+
+      默认值：`extensions:['.js', '.json']`,当导入语句没带文件后缀时，Webpack会根据extensions定义的后缀列表进行文件查找，所以：
+
+      - 列表值尽量少
+      - 频率高的文件类型的后缀写在前面
+      - 源码中的导入语句尽可能的写上文件后缀，如`require(./data)`要写成`require(./data.json)`
+
+2. **配置loader时，通过test、exclude、include缩小搜索范围**
+
+### 压缩文件输出体积
+
+1. 根据环境判断输出的代码，**减少生产环境代码体积**
+   **通过`DefinePlugin`插件可以区分环境**
+
+   ```js
+   const DefinePlugin = require('webpack/lib/DefinePlugin');
+   //...
+   plugins:[
+       new DefinePlugin({
+           'process.env': {
+               NODE_ENV: JSON.stringify('production')
+           }
+       })
+   ]
+   ```
+
+   注意，`JSON.stringify('production')` 的原因是，环境变量值需要一个双引号包裹的字符串，而stringify后的值是`'"production"'`
+
+   然后就可以在源码中使用定义的环境：
+
+   ```js
+   if(process.env.NODE_ENV === 'production'){
+       console.log('你在生产环境')
+       doSth();
+   }else{
+       console.log('你在开发环境')
+       doSthElse();
+   }
+   ```
+
+   当代码中使用了process时，**Webpack会自动打包进process模块的代码以支持非Node.js的运行环境**，这个模块的作用是模拟Node.js中的process，以支持`process.env.NODE_ENV === 'production'` 语句。
+
+
+   
+
+2. 压缩JS、CSS、ES6代码
+
+   1. **压缩JS：`parallelUglifyPlugin`**
+   2. **压缩ES6：`uglify-webpack-plugin`**
+      由于浏览器越来越多的支持ES6，可以通过在.babelrc中去掉babel-preset-env来防止babel-loader转换ES6代码
+   3. **压缩CSS：`css-loader?minimize` `PurifyCSSPlugin`**
+      其中，css-loader内置了cssnano，可以删除多余空格，只需要使用`css-loader?minimize`就可以压缩
+      而**PurifyCSSPlugin**也可以去除没用到的css代码，类似JS的Tree Shaking
+
+   eg:
+
+   ```js
+   const UglifyJSPlugin = require('webpack/lib/optimize/UglifyJsPlugin');
+   //...
+   plugins: [
+       new UglifyJSPlugin({
+           compress: {
+               warnings: false,  //删除无用代码时不输出警告
+               drop_console: true,  //删除所有console语句，可以兼容IE
+               collapse_vars: true,  //内嵌已定义但只使用一次的变量
+               reduce_vars: true,  //提取使用多次但没定义的静态值到变量
+           },
+           output: {
+               beautify: false, //最紧凑的输出，不保留空格和制表符
+               comments: false, //删除所有注释
+           }
+       })
+   ]
+   ```
+
+3. **使用Tree Shaking剔除JS死代码**
+
+   他需要依赖ES6的import、export的模块化语法，所以**它正常工作的前提是代码必须采用ES6的模块化语法**
+
+   **启用Tree Shaking：**
+
+   1. 修改.babelrc以保留ES6模块化语句：
+
+      ```js
+      {
+          "presets": [
+              [
+                  "env", 
+                  { "module": false },   //关闭Babel的模块转换功能，保留ES6模块化语法
+              ]
+          ]
+      }
+      ```
+
+   2. 通过uglifysPlugin来Tree-shaking JS。
+
+      ```js
+      var baseConfig = {
+      // ...
+       new webpack.optimize.OccurenceOrderPlugin() // 为组件分配ID,通过这个插件webpack可以分析和优先考虑使用最多的模块，然后为他们分配最小的ID
+       new webpack.optimize.UglifyJsPlugin() // 然后在我们使用npm run build会发现代码是压缩的
+      }
+      ```
+
+### 优化输出质量
+
+1. 提取页面间公共代码
+   通过提取页面间的公共代码，把公共代码提取到一个文件，防止各个chumk都包含有公共代码，这样当用户访问一个网页时，加载了公共文件，再访问其他页面时就可以直接使用文件的缓存。
+
+   1. 应用方法：**使用`CommonsChunkPlugin`**
+
+      ```js
+      const CommonChunkPlugin = require('webpack/lib/optimize/')
+      // ...
+      plugins:[
+        new CommonsChunkPlugin({
+          chunks:['a','b'], // 从哪些chunk中提取
+          name:'common', // 提取的公共部分形成一个新的chunk
+        })
+      ]
+      ```
+
+   2. 再找出依赖的基础库，写一个base.js文件，再和common,js提取公共代码到base中，这样，common.js就剔除了基础库代码，而base.js保持不变。
+
+      ```js
+      //base.js
+      import 'react';
+      import 'react-dom';
+      import './base.css';
+      //webpack.config.json
+      entry:{
+          base: './base.js'
+      },
+      plugins:[
+          new CommonsChunkPlugin({
+              chunks:['base','common'],
+              name:'base',
+              //minChunks:2, 表示文件要被提取出来需要在指定的chunks中出现的最小次数，防止common.js中没有代码的情况
+          })        
+      ]
+      ```
+
+      
+
+   

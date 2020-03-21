@@ -289,6 +289,14 @@ c.dev();
 - focus、blur 之类的事件本身没有事件冒泡机制，所以无法委托
 - mousemove、mouseout 这样的事件，虽然有事件冒泡，但是只能不断通过位置去计算定位，对性能消耗高，不适合事件委托
 
+### 页面加载完后执行某一方法的三种对比
+
+​     使用1：jQuery的`$(function){}`和2：jquery的`$(document).ready(function(){})`;无论位置放置在哪里，总是优先其余三种方式（原因是：这两种方式是在document加载完成后就执行，后三种是等到整个window页面加载完成后才执行），这两者之间的执行顺序是谁在上方谁优先执行。
+
+​        使用3：jQuery的`$(window).load(function(){});`和4:`window.onload = function bbb(){}`这两种方式，总是优先于`<body onload="aaa()">`执行。他们两者执行顺序也是根据谁在上方谁先执行。
+
+​       使用5：`<body onload="aaa()">`总是最后执行。
+
 ### 正则实现trim()功能
 
 ```js
