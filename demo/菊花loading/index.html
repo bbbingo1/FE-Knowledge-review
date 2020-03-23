@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>loading</title>
+  <style>
+    .ant-spin-dot {
+      position: relative;
+      display: inline-block;
+      width: 66px;
+      height: 66px;
+    }
+
+    .ant-spin-dot-spin {
+      animation: antRotate 1.2s infinite linear;
+    }
+
+    .ant-spin-dot i {
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      background-color: #1890ff;
+      transform: scale(0.75);
+      display: block;
+      position: absolute;
+      animation: antSpinMove 1s infinite linear alternate;
+      transform-origin: 50% 50%;
+    }
+
+    .ant-spin-dot i:nth-child(1) {
+      left: 0;
+      top: 0;
+    }
+
+    .ant-spin-dot i:nth-child(2) {
+      right: 0;
+      top: 0;
+      animation-delay: 0.4s;
+    }
+
+    .ant-spin-dot i:nth-child(3) {
+      right: 0;
+      bottom: 0;
+      animation-delay: 0.8s;
+    }
+
+    .ant-spin-dot i:nth-child(4) {
+      left: 0;
+      bottom: 0;
+      animation-delay: 1.2s;
+    }
+
+    @keyframes antSpinMove {
+      from {
+        opacity: 0.3;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes antRotate {
+      to {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <span class="ant-spin-dot ant-spin-dot-spin">
+      <i></i><i></i><i></i><i></i>
+    </span>
+  </div>
+</body>
+
+</html>

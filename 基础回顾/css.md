@@ -16,6 +16,8 @@
 | vw   | viewpoint width，视窗宽度，1vw=视窗宽度的1%                  |
 | vh   | viewpoint height，视窗高度，1vh=视窗高度的1%                 |
 | rem  | 根元素（html）的 font-size                                   |
+| vmax | vw和vh中的较大值，横竖屏时很有用                             |
+| vmin | vw和vh中的较小值，横竖屏常用                                 |
 
 ### 单行省略号
 
