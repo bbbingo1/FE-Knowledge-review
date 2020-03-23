@@ -1,4 +1,4 @@
-// 广度优先遍历
+// 广度优先遍历 + 队列
 function breadthFirstSearch(node) {
     var nodeList = [];
     if (node) {

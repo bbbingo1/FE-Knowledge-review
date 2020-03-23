@@ -11,7 +11,7 @@ function deepFirstSearch(node, nodeList = []) {
     return nodeList;
 }
 
-// 深度优先遍历；非递归
+// 深度优先遍历；非递归 + 栈
 function dfs() {
     let nodes = []
     if (node) {
