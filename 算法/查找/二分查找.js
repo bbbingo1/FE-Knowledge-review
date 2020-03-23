@@ -11,6 +11,7 @@ console.log(search(a, 34))
 
 // 非递归实现
 function binarySeach(array, key) {
+    if (!array[0] || key < array[0] || key > array[array.length - 1]) return -1;
     let left = 0;
     let right = array.length - 1;
     let middle;
@@ -21,6 +22,9 @@ function binarySeach(array, key) {
         }
         else if (array[middle] > key) {
             right = middle - 1;
+        }else{
+            return middle;
         }
     }
+    return -1;
 }
