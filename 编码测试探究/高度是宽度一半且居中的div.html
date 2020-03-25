@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            padding: calc(200px/4) 0;
+            width: 200px;
+            transform: translate(-50%, -50%);
+            background-color: blueviolet;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+        .content{
+            width: 200px;
+            height: 200px;
+            display: table;
+        }
+        .box{
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 实现一个div在页面中垂直水平居中，然后高度是宽度的一半（实现不了也可以固定为200px）div里有文字A垂直水平居中 -->
+    <div class="content">
+        <div class="box">A</div>
+    </div>
+</body>
+
+</html>
