@@ -493,7 +493,7 @@ Promise.race = function(promises){
 
 ```js
 // 实现promise.all
-Promise.race = function(promises){
+Promise.all = function(promises){
   return new Promise((resolve,reject) => {
   	  var resolvedCounter = 0;
     	var resolvedValue = [];
@@ -501,7 +501,7 @@ Promise.race = function(promises){
         Promise.resolve(promises[i]).then(data=>{
           resolvedCounter++;
           resolvedValue[i] = data;
-          if(resolvedCounter) return resolve(resolvedValue)
+          if(resolvedCounter == promises.length) return resolve(resolvedValue)
         },err=>{
           return reject(err)
         })
@@ -509,8 +509,6 @@ Promise.race = function(promises){
 	})
 }
 ```
-
-
 
 ### 函数柯里化
 
@@ -523,6 +521,44 @@ Function.method('curry',function(){
   }
 })
 ```
+
+### 封装一个cookie
+
+```js
+// 设置cookie  
+var setCookie = function(c_name,value,expiremMinutes){  
+  var exdate = new Date();  
+  exdate.setTime(exdate.getTime() + expiremMinutes * 60 * 1000);  //设置日期毫秒数
+  document.cookie += c_name + "=" + escape(value)+((expiremMinutes==null) ? "" : ";expires="+exdate.toGMTString());  
+}; 
+// 读取cookie  
+getCookie = function(c_name){  
+  if (document.cookie.length>0)  
+  {  
+    var c_start = document.cookie.indexOf(c_name + "=");  //找到c_name=首次出现的地方
+    if (c_start != -1)  //说明c_name=存在
+    {   
+      c_start = c_start + c_name.length+1;  //找到=的下一个位置
+      var c_end = document.cookie.indexOf(";",c_start);  //从上一步的位置开始查找，直到";"的位置
+      if (c_end == -1)   
+      { c_end = document.cookie.length  ;}
+      return unescape(document.cookie.substring(c_start, c_end)) ;  
+    }  
+  }  
+  return "" ; 
+};
+// 删除cookie  
+delCookie = function(c_name){  
+  var exp = new Date();  
+  exp.setTime(exp.getTime() - 1);  
+  var cval = this.getCookie(c_name);  
+  if(cval!=null){  
+      document.cookie = c_name + "=" + cval + ";expires=" + exp.toGMTString();  
+  }  
+};
+```
+
+
 
 ### 继承
 

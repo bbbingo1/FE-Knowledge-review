@@ -152,7 +152,7 @@ translate()是transform的一个值。**改变transform或opacity不会触发浏
 
 **flex-direction**:**row(主轴为水平方向)/column(主轴为竖直方向)/row-reverse(从右到左水平方向)/column-reverse(从下至上竖直方向)**
 
-**flex-wrap:nowrap(自动缩小项目，不换行)/wrap(换行，且第一行在上方)/wrap-reverse(换行**，**第一行在下面****)**
+**flex-wrap:nowrap(自动缩小项目，不换行)/wrap(换行，且第一行在上方)/wrap-reverse(换行**，**第一行在下面)**
 
 合在一起：**flex-flow:row nowrap/row wrap/column wrap-reverse...，**默认值为**row nowrap**，即横向排列 不换行。flex-flow是flex-direction和flex-wrap的简写形式
 
@@ -195,3 +195,11 @@ translate()是transform的一个值。**改变transform或opacity不会触发浏
 ### animation
 
 ![img](https://user-gold-cdn.xitu.io/2018/9/9/165bd6dede39a8b8?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+### 一个div里面有个span，span里有很多字，这时候给span加一个border会怎样显示
+
+![image-20200324021856998](https://i.loli.net/2020/03/24/eFaVJoWSqxMzbwO.png)
+
+如果设置margin（行内元素上下margin无效）和padding
+
+![image-20200324022032224](https://i.loli.net/2020/03/24/5OqcARnVfLwNkbJ.png)
